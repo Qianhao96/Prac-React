@@ -154,6 +154,9 @@ const App = () => {
     const isDesktop = () => {
         return window.innerWidth >= 992;
     }
+    const test = () => {
+        return window.innerWidth >= 992;
+    }
 
     const menu = [
         {
