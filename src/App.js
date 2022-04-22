@@ -159,7 +159,7 @@ const App = () => {
         {
             label: 'Home',
             items: [{
-                label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/'
+                label: 'LQHDashboard', icon: 'pi pi-fw pi-home', to: '/'
             }]
         },
         {
