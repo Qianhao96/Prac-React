@@ -72,46 +72,28 @@ export const TrafficByDevice = (props) => {
           sx={{
             height: 300,
             position: 'relative'
-          }}
-        >
-          <Doughnut
-            data={data}
-            options={options}
-          />
+          }}>
+          <Doughnut data={data} options={options} />
         </Box>
         <Box
           sx={{
             display: 'flex',
             justifyContent: 'center',
             pt: 2
-          }}
-        >
-          {devices.map(({
-            color,
-            icon: Icon,
-            title,
-            value
-          }) => (
+          }}>
+          {devices.map(({ color, icon: Icon, title, value }) => (
             <Box
               key={title}
               sx={{
                 p: 1,
                 textAlign: 'center'
-              }}
-            >
+              }}>
               <Icon color="action" />
-              <Typography
-                color="textPrimary"
-                variant="body1"
-              >
+              <Typography color="textPrimary" variant="body1">
                 {title}
               </Typography>
-              <Typography
-                style={{ color }}
-                variant="h4"
-              >
-                {value}
-                %
+              <Typography style={{ color }} variant="h4">
+                {value}%
               </Typography>
             </Box>
           ))}

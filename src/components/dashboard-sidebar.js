@@ -19,42 +19,42 @@ import { NavItem } from './nav-item';
 const items = [
   {
     href: '/',
-    icon: (<ChartBarIcon fontSize="small" />),
+    icon: <ChartBarIcon fontSize="small" />,
     title: 'Dashboard'
   },
   {
     href: '/customers',
-    icon: (<UsersIcon fontSize="small" />),
+    icon: <UsersIcon fontSize="small" />,
     title: 'Customers'
   },
   {
     href: '/products',
-    icon: (<ShoppingBagIcon fontSize="small" />),
+    icon: <ShoppingBagIcon fontSize="small" />,
     title: 'Products'
   },
   {
     href: '/account',
-    icon: (<UserIcon fontSize="small" />),
+    icon: <UserIcon fontSize="small" />,
     title: 'Account'
   },
   {
     href: '/settings',
-    icon: (<CogIcon fontSize="small" />),
+    icon: <CogIcon fontSize="small" />,
     title: 'Settings'
   },
   {
     href: '/login',
-    icon: (<LockIcon fontSize="small" />),
+    icon: <LockIcon fontSize="small" />,
     title: 'Login'
   },
   {
     href: '/register',
-    icon: (<UserAddIcon fontSize="small" />),
+    icon: <UserAddIcon fontSize="small" />,
     title: 'Register'
   },
   {
     href: '/404',
-    icon: (<XCircleIcon fontSize="small" />),
+    icon: <XCircleIcon fontSize="small" />,
     title: 'Error'
   }
 ];
@@ -67,19 +67,15 @@ export const DashboardSidebar = (props) => {
     noSsr: false
   });
 
-  useEffect(
-    () => {
-      if (!router.isReady) {
-        return;
-      }
+  useEffect(() => {
+    if (!router.isReady) {
+      return;
+    }
 
-      if (open) {
-        onClose?.();
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [router.asPath]
-  );
+    if (open) {
+      onClose?.();
+    }
+  }, [router.asPath]);
 
   const content = (
     <>
@@ -88,14 +84,10 @@ export const DashboardSidebar = (props) => {
           display: 'flex',
           flexDirection: 'column',
           height: '100%'
-        }}
-      >
+        }}>
         <div>
           <Box sx={{ p: 3 }}>
-            <NextLink
-              href="/"
-              passHref
-            >
+            <NextLink href="/" passHref>
               <a>
                 <Logo
                   sx={{
@@ -117,22 +109,13 @@ export const DashboardSidebar = (props) => {
                 px: 3,
                 py: '11px',
                 borderRadius: 1
-              }}
-            >
+              }}>
               <div>
-                <Typography
-                  color="inherit"
-                  variant="subtitle1"
-                >
+                <Typography color="inherit" variant="subtitle1">
                   Acme Inc
                 </Typography>
-                <Typography
-                  color="neutral.400"
-                  variant="body2"
-                >
-                  Your tier
-                  {' '}
-                  : Premium
+                <Typography color="neutral.400" variant="body2">
+                  Your tier : Premium
                 </Typography>
               </div>
               <SelectorIcon
@@ -153,12 +136,7 @@ export const DashboardSidebar = (props) => {
         />
         <Box sx={{ flexGrow: 1 }}>
           {items.map((item) => (
-            <NavItem
-              key={item.title}
-              icon={item.icon}
-              href={item.href}
-              title={item.title}
-            />
+            <NavItem key={item.title} icon={item.icon} href={item.href} title={item.title} />
           ))}
         </Box>
         <Divider sx={{ borderColor: '#2D3748' }} />
@@ -166,18 +144,11 @@ export const DashboardSidebar = (props) => {
           sx={{
             px: 2,
             py: 3
-          }}
-        >
-          <Typography
-            color="neutral.100"
-            variant="subtitle2"
-          >
+          }}>
+          <Typography color="neutral.100" variant="subtitle2">
             Need more features?
           </Typography>
-          <Typography
-            color="neutral.500"
-            variant="body2"
-          >
+          <Typography color="neutral.500" variant="body2">
             Check out our Pro solution template.
           </Typography>
           <Box
@@ -189,25 +160,17 @@ export const DashboardSidebar = (props) => {
               '& img': {
                 width: '100%'
               }
-            }}
-          >
-            <img
-              alt="Go to pro"
-              src="/static/images/sidebar_pro.png"
-            />
+            }}>
+            <img alt="Go to pro" src="/static/images/sidebar_pro.png" />
           </Box>
-          <NextLink
-            href="https://material-kit-pro-react.devias.io/"
-            passHref
-          >
+          <NextLink href="https://material-kit-pro-react.devias.io/" passHref>
             <Button
               color="secondary"
               component="a"
-              endIcon={(<OpenInNewIcon />)}
+              endIcon={<OpenInNewIcon />}
               fullWidth
               sx={{ mt: 2 }}
-              variant="contained"
-            >
+              variant="contained">
               Pro Live Preview
             </Button>
           </NextLink>
@@ -228,8 +191,7 @@ export const DashboardSidebar = (props) => {
             width: 280
           }
         }}
-        variant="permanent"
-      >
+        variant="permanent">
         {content}
       </Drawer>
     );
@@ -248,8 +210,7 @@ export const DashboardSidebar = (props) => {
         }
       }}
       sx={{ zIndex: (theme) => theme.zIndex.appBar + 100 }}
-      variant="temporary"
-    >
+      variant="temporary">
       {content}
     </Drawer>
   );

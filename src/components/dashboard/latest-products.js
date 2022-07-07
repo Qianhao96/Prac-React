@@ -50,17 +50,11 @@ const products = [
 
 export const LatestProducts = (props) => (
   <Card {...props}>
-    <CardHeader
-      subtitle={`${products.length} in total`}
-      title="Latest Products"
-    />
+    <CardHeader subtitle={`${products.length} in total`} title="Latest Products" />
     <Divider />
     <List>
       {products.map((product, i) => (
-        <ListItem
-          divider={i < products.length - 1}
-          key={product.id}
-        >
+        <ListItem divider={i < products.length - 1} key={product.id}>
           <ListItemAvatar>
             <img
               alt={product.name}
@@ -75,10 +69,7 @@ export const LatestProducts = (props) => (
             primary={product.name}
             secondary={`Updated ${formatDistanceToNow(product.updatedAt)}`}
           />
-          <IconButton
-            edge="end"
-            size="small"
-          >
+          <IconButton edge="end" size="small">
             <MoreVertIcon />
           </IconButton>
         </ListItem>
@@ -90,14 +81,8 @@ export const LatestProducts = (props) => (
         display: 'flex',
         justifyContent: 'flex-end',
         p: 2
-      }}
-    >
-      <Button
-        color="primary"
-        endIcon={<ArrowRightIcon />}
-        size="small"
-        variant="text"
-      >
+      }}>
+      <Button color="primary" endIcon={<ArrowRightIcon />} size="small" variant="text">
         View all
       </Button>
     </Box>

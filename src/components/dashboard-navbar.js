@@ -33,8 +33,7 @@ export const DashboardNavbar = (props) => {
             minHeight: 64,
             left: 0,
             px: 2
-          }}
-        >
+          }}>
           <IconButton
             onClick={onSidebarOpen}
             sx={{
@@ -42,8 +41,7 @@ export const DashboardNavbar = (props) => {
                 xs: 'inline-flex',
                 lg: 'none'
               }
-            }}
-          >
+            }}>
             <MenuIcon fontSize="small" />
           </IconButton>
           <Tooltip title="Search">
@@ -59,11 +57,7 @@ export const DashboardNavbar = (props) => {
           </Tooltip>
           <Tooltip title="Notifications">
             <IconButton sx={{ ml: 1 }}>
-              <Badge
-                badgeContent={4}
-                color="primary"
-                variant="dot"
-              >
+              <Badge badgeContent={4} color="primary" variant="dot">
                 <BellIcon fontSize="small" />
               </Badge>
             </IconButton>
@@ -74,8 +68,7 @@ export const DashboardNavbar = (props) => {
               width: 40,
               ml: 1
             }}
-            src="/static/images/avatars/avatar_1.png"
-          >
+            src="/static/images/avatars/avatar_1.png">
             <UserCircleIcon fontSize="small" />
           </Avatar>
         </Toolbar>

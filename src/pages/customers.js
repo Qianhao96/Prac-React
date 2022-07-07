@@ -8,17 +8,14 @@ import { customers } from '../__mocks__/customers';
 const Customers = () => (
   <>
     <Head>
-      <title>
-        Customers | Material Kit
-      </title>
+      <title>Customers | Material Kit</title>
     </Head>
     <Box
       component="main"
       sx={{
         flexGrow: 1,
         py: 8
-      }}
-    >
+      }}>
       <Container maxWidth={false}>
         <CustomerListToolbar />
         <Box sx={{ mt: 3 }}>
@@ -28,10 +25,6 @@ const Customers = () => (
     </Box>
   </>
 );
-Customers.getLayout = (page) => (
-  <DashboardLayout>
-    {page}
-  </DashboardLayout>
-);
+Customers.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 
 export default Customers;

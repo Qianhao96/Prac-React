@@ -84,14 +84,11 @@ export const Sales = (props) => {
   return (
     <Card {...props}>
       <CardHeader
-        action={(
-          <Button
-            endIcon={<ArrowDropDownIcon fontSize="small" />}
-            size="small"
-          >
+        action={
+          <Button endIcon={<ArrowDropDownIcon fontSize="small" />} size="small">
             Last 7 days
           </Button>
-        )}
+        }
         title="Latest Sales"
       />
       <Divider />
@@ -100,12 +97,8 @@ export const Sales = (props) => {
           sx={{
             height: 400,
             position: 'relative'
-          }}
-        >
-          <Bar
-            data={data}
-            options={options}
-          />
+          }}>
+          <Bar data={data} options={options} />
         </Box>
       </CardContent>
       <Divider />
@@ -114,13 +107,8 @@ export const Sales = (props) => {
           display: 'flex',
           justifyContent: 'flex-end',
           p: 2
-        }}
-      >
-        <Button
-          color="primary"
-          endIcon={<ArrowRightIcon fontSize="small" />}
-          size="small"
-        >
+        }}>
+        <Button color="primary" endIcon={<ArrowRightIcon fontSize="small" />} size="small">
           Overview
         </Button>
       </Box>

@@ -17,10 +17,7 @@ export const SettingsPassword = (props) => {
   return (
     <form {...props}>
       <Card>
-        <CardHeader
-          subheader="Update password"
-          title="Password"
-        />
+        <CardHeader subheader="Update password" title="Password" />
         <Divider />
         <CardContent>
           <TextField
@@ -50,12 +47,8 @@ export const SettingsPassword = (props) => {
             display: 'flex',
             justifyContent: 'flex-end',
             p: 2
-          }}
-        >
-          <Button
-            color="primary"
-            variant="contained"
-          >
+          }}>
+          <Button color="primary" variant="contained">
             Update
           </Button>
         </Box>

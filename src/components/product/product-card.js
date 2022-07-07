@@ -10,60 +10,35 @@ export const ProductCard = ({ product, ...rest }) => (
       flexDirection: 'column',
       height: '100%'
     }}
-    {...rest}
-  >
+    {...rest}>
     <CardContent>
       <Box
         sx={{
           display: 'flex',
           justifyContent: 'center',
           pb: 3
-        }}
-      >
-        <Avatar
-          alt="Product"
-          src={product.media}
-          variant="square"
-        />
+        }}>
+        <Avatar alt="Product" src={product.media} variant="square" />
       </Box>
-      <Typography
-        align="center"
-        color="textPrimary"
-        gutterBottom
-        variant="h5"
-      >
+      <Typography align="center" color="textPrimary" gutterBottom variant="h5">
         {product.title}
       </Typography>
-      <Typography
-        align="center"
-        color="textPrimary"
-        variant="body1"
-      >
+      <Typography align="center" color="textPrimary" variant="body1">
         {product.description}
       </Typography>
     </CardContent>
     <Box sx={{ flexGrow: 1 }} />
     <Divider />
     <Box sx={{ p: 2 }}>
-      <Grid
-        container
-        spacing={2}
-        sx={{ justifyContent: 'space-between' }}
-      >
+      <Grid container spacing={2} sx={{ justifyContent: 'space-between' }}>
         <Grid
           item
           sx={{
             alignItems: 'center',
             display: 'flex'
-          }}
-        >
+          }}>
           <ClockIcon color="action" />
-          <Typography
-            color="textSecondary"
-            display="inline"
-            sx={{ pl: 1 }}
-            variant="body2"
-          >
+          <Typography color="textSecondary" display="inline" sx={{ pl: 1 }} variant="body2">
             Updated 2hr ago
           </Typography>
         </Grid>
@@ -72,18 +47,10 @@ export const ProductCard = ({ product, ...rest }) => (
           sx={{
             alignItems: 'center',
             display: 'flex'
-          }}
-        >
+          }}>
           <DownloadIcon color="action" />
-          <Typography
-            color="textSecondary"
-            display="inline"
-            sx={{ pl: 1 }}
-            variant="body2"
-          >
-            {product.totalDownloads}
-            {' '}
-            Downloads
+          <Typography color="textSecondary" display="inline" sx={{ pl: 1 }} variant="body2">
+            {product.totalDownloads} Downloads
           </Typography>
         </Grid>
       </Grid>
