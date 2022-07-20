@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import { CacheProvider } from '@emotion/react';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
@@ -31,3 +32,10 @@ const App = (props) => {
 };
 
 export default App;
+
+App.propTypes = {
+  Component: PropTypes.any,
+  emotionCache: PropTypes.any,
+  pageProps: PropTypes.any,
+  getLayout: PropTypes.any
+};

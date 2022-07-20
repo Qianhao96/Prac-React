@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Box } from '@mui/material';
+import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import { DashboardNavbar } from './dashboard-navbar';
 import { DashboardSidebar } from './dashboard-sidebar';
@@ -35,4 +36,8 @@ export const DashboardLayout = (props) => {
       <DashboardSidebar onClose={() => setSidebarOpen(false)} open={isSidebarOpen} />
     </>
   );
+};
+
+DashboardLayout.propTypes = {
+  children: PropTypes.any
 };
