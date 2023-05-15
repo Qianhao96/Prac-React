@@ -1,65 +1,51 @@
-# Change Log
+# Changelog
 
-## V1.0.0
+## 9.0.0
+###### * Brings support to PrimeReact 9.x
 
-###### Aug 7, 2020
+**Migration Guide**
 
-- Add `eslint`
-- Add `Feather Icons`
-- Add `Formik` for login/register pages
-- Implement `react-router` v6 routing method
-- Remove extra views
-- Remove `node-sass` dependency
-- Update all components to match the PRO version style
-- Update dependencies
-- Update folder structure to remove folder depth
-- Update theme configuration
+- Update theme files and layout files.
 
-## V0.4.0
+**Implemented New Features and Enhancements**
 
-###### Jul 24, 2019
+- Upgrade to PrimeReact 9.2.0
+- Upgrade to PrimeFlex 3.3.0
+- Update other dependencies
 
-- Adjust theme colors
-- Implement `useStyle` hook instead of `withStyles` HOC
-- Implement a custom Route component to wrap views in layouts
-- Remove `services` and `data` folders, each component has its own data
-- Remove unused `.scss` files from `assets` folder
-- Replace `.jsx` with `.js`
-- Replace Class Components with Function Components
-- Replace custom cumponents (Portlet) with Material-UI built-in components
-- Replace dependency `classnames` with `clsx`
-- Update dependencies
-- Update the layout to match the PRO version
+## 8.0.0
+###### * Brings support to PrimeReact 8.x
 
-## V0.3.0
+**Migration Guide**
 
-###### May 13, 2019
+- Update theme files and layout files.
 
-- Implement `jsconfig.json` file and removed `.env` to match React v16.8.6 absolute paths
-- Update chart styles and options
-- Update Dashboard view top widgets styles and structure
-- Update few icons to match @material-ui v4 updates
-- Update React version to 16.8.6 to support React Hooks
-- Update to @material-ui to 4.0.0-beta
+**Implemented New Features and Enhancements**
 
-## V0.2.0
+- Upgrade to PrimeReact 8.6.1
+- Upgrade to PrimeIcons 6.0.1
+- Upgrade to React Router 6.3.0
+- New styles of PrimeReact components
 
-###### May 11, 2019
+## 7.0.0
+###### * Brings support to PrimeReact 7.x
 
-- Add docs for IE11 polyfill
-- Fix `DisplayMode` component size, when used as a flex child it could grow/shrink
-- Fix `ProductCard` component description height
-- Fix `Typography` view responsiveness for small devices
-- Fix charts responsiveness
-- Remove "status" from `ProductCard` component since it was not part of released design
-- Remove `auth` service folder since it won't be implemented for this version
-- Remove `authGuard` since it won't be used in this version
-- Remove unused components from shared components
-- Remove unused scss from assets
-- Update README.md
+**Migration Guide**
 
-## V0.1.0
+- Update theme files and layout files.
 
-###### May 2, 2019
+**Implemented New Features and Enhancements**
 
-### Initial commit
+- Upgrade to PrimeReact 7.2.0
+- Upgrade to PrimeFlex 3.1.2
+- Upgrade to PrimeIcons 5.0.0
+- New styles of PrimeReact components
+
+## 6.1.1
+
+**Migration Guide**
+- Update theme files and layout files.
+
+**Implemented New Features and Enhancements:**
+
+- Styles of new PrimeReact components

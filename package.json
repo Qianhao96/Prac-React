@@ -1,49 +1,57 @@
 {
-  "name": "material-kit-react",
-  "author": "Devias IO",
-  "licence": "MIT",
-  "version": "2.0.0",
-  "private": false,
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export",
-    "lint": "eslint src --ext .js",
-    "lint-fix": "eslint src --fix --ext .js",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
-  },
+  "name": "ultima-react-typescript",
+  "version": "9.0.0",
+  "homepage": ".",
+  "private": true,
   "dependencies": {
-    "@emotion/cache": "^11.5.0",
-    "@emotion/react": "^11.5.0",
-    "@emotion/server": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "@mui/icons-material": "^5.0.5",
-    "@mui/lab": "^5.0.0-alpha.53",
-    "@mui/material": "^5.0.6",
-    "@mui/styles": "^5.0.2",
-    "chart.js": "^3.5.1",
-    "date-fns": "^2.25.0",
-    "formik": "^2.1.5",
-    "history": "^5.0.0",
-    "next": "^12.0.3-canary.7",
-    "nprogress": "^0.2.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-chartjs-2": "^3.0.4",
-    "react-dom": "^17.0.2",
-    "react-perfect-scrollbar": "^1.5.8",
-    "uuid": "^8.3.0",
-    "yup": "^0.32.9"
+    "@fullcalendar/core": "^6.1.4",
+    "@fullcalendar/daygrid": "^6.1.4",
+    "@fullcalendar/interaction": "^6.1.4",
+    "@fullcalendar/timegrid": "^6.1.4",
+    "@fullcalendar/react": "^6.1.4",
+    "@types/node": "18.14.6",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-transition-group": "^4.4.5",
+    "axios": "^1.3.4",
+    "chart.js": "4.2.1",
+    "sass": "^1.58.3",
+    "prettier": "2.8.4",
+    "primeflex": "^3.3.0",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1",
+    "react-router-dom": "6.8.2",
+    "react-transition-group": "^4.4.5",
+    "typescript": "^4.9.5",
+    "web-vitals": "^3.1.1" 
   },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "12.0.3-canary.7",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.7.1"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
